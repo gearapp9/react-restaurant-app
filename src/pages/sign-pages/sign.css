@@ -1,0 +1,85 @@
+.sign-page .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-page .sign-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 25em;
+}
+
+.sign-page .sign-content form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1em;
+}
+
+.sign-page .sign-content form input {
+  padding: 0.5em 1em;
+  border: none;
+  background-color: var(--gray-light);
+  height: 4em;
+  border-radius: 0.5em;
+}
+
+.sign-page .sign-content form button {
+  border: none;
+  padding: 0.5em;
+  height: 3em;
+  border-radius: 0.5em;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sign-page .sign-content form button:hover {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+/********************* google******************* */
+.sign-page .sign-content .sign-in-options {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-page .sign-content .sign-in-options::before,
+.sign-page .sign-content .sign-in-options::after {
+  position: absolute;
+  content: "";
+  top: 50;
+  transform: translateY(50%);
+  height: 1px;
+  background-color: black;
+  width: 47%;
+}
+.sign-page .sign-content .sign-in-options::before {
+  left: 0;
+}
+.sign-page .sign-content .sign-in-options::after {
+  right: 0;
+}
+.sign-page .sign-content .google-sign-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em;
+  background-color: var(--gray-light);
+  border-radius: 0.5em;
+  width: 100%;
+  height: 3em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sign-page .sign-content .google-sign-in:hover {
+  background-color: #e0e0e0;
+}
