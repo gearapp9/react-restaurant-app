@@ -1,0 +1,54 @@
+.header-logo .logo {
+  color: white;
+}
+
+.landing-header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  color: white;
+}
+.landing-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.5em; /* 72px */
+  border-bottom: 1px solid white;
+}
+/*********************** header for others************************* */
+.home-header {
+  position: relative;
+  height: 4.5em;
+  color: white;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+.home-header-container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+/*********************** header for others **************************/
+
+.nav-links {
+  display: flex;
+  gap: 2em;
+}
+.head-btn,
+.head-btn {
+  border-radius: 1.7em;
+  padding: 0.7em;
+  width: 6em;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: var(--button-color);
+  color: white;
+}
+.head-btn:hover,
+.head-btn:hover {
+  background-color: var(--button-highlight);
+}

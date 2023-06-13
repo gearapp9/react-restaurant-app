@@ -1,0 +1,19 @@
+.card {
+  justify-self: center;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 1em;
+  text-align: center;
+  position: relative;
+  width: 15em;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+.card img {
+  height: 10em;
+  width: 100%;
+  border-radius: 1em;
+}
+
