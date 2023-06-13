@@ -5,6 +5,9 @@ import { HeaderContext } from "../../contexts/HeaderContext";
 export const Header = () => {
   const { headerType } = useContext(HeaderContext);
 
+  //toggling diffrent buttons depending on each page 
+
+
   return (
     <Fragment>
       <header
@@ -26,18 +29,6 @@ export const Header = () => {
           </div>
           <nav className="nav">
             <ul className="nav-links">
-              {/* <Link
-                to={"/sign-in"}
-                className={`${headerType === "sign-in" ? "hide" : ""}`}
-              >
-                <li className="sign-in head-btn">Sign In</li>
-              </Link> */}
-              {/* <Link
-                to={"/sign-up"}
-                className={`${headerType === "sign-up" ? "hide" : ""}`}
-              >
-                <li className="sign-up head-btn">Sign Up</li>
-              </Link> */}
 
               <Link
                 to={"/Home"}

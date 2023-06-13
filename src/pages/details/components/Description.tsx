@@ -1,18 +1,23 @@
 import "./description.css";
 
 import { Restaurant } from "../../../models/Restaurant";
+import { FavIcon } from "../../shared/FavIcon";
 
 type DescriptionProps = {
-  restaurant: Restaurant | undefined;
+  restaurant: Restaurant;
 };
 
 export const Description = ({ restaurant }: DescriptionProps) => {
+  const { id } = restaurant;
+
   return (
-    <div className="content">
-      <div className="image">
+    <div className="content fav-icon-position">
+     
+      <div className="image ">
+      <FavIcon id={id} />
         <img src={restaurant?.img} alt="" />
       </div>
-      <div className="description">
+      <div className="description ">
         <ul className="labels">
           <li>Name</li>
           <li>Adress</li>

@@ -7,33 +7,7 @@
   position: relative;
   width: 15em;
 }
-.card .fav {
-  position: absolute;
-  right: 0;
-  width: 2em;
-  height: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.2em;
-  background-color: white;
-  z-index: 2;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.card .fav .add-to-fav {
-  width: max-content;
-  position: absolute;
-  top: 0;
-  right: 0;
-  visibility: hidden;
-}
-
-.card .fav:hover .add-to-fav {
-  transform: translateY(-100%);
-  visibility: visible;
-}
 .card:hover {
   transform: scale(1.1);
 }
@@ -43,10 +17,3 @@
   border-radius: 1em;
 }
 
-.favt {
-  background-image: url("../../assets/favt.svg");
-}
-
-.favf {
-  background-image: url("../../assets/favf.svg");
-}

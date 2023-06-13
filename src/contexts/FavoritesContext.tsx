@@ -17,15 +17,16 @@ type FavoritesContextProps = {
 export const FavoritesContext = createContext({} as FavoritesContextProps);
 
 export const FavoritesProvider = ({ children }: ContextProp) => {
-  const getLocalStorage = () => {
-    return JSON.parse(localStorage.getItem("favorites") || "[]");
-  };
+  // prettier-ignore
+  const getLocalStorage = () => {return JSON.parse(localStorage.getItem("favorites") || "[]");};
 
-  const [favoriteList, setFavorites] = useState<String[]>(
-    getLocalStorage().length ? getLocalStorage() : []
-  );
+  // prettier-ignore
+  const [favoriteList, setFavorites] = useState<String[]>( getLocalStorage().length ? getLocalStorage() : []);
+
+  //if the favorite icon wa reclicked , removeFav would be true with the function toggleRemoveFav
   const [removeFav, setRemoveFav] = useState<boolean>(false);
 
+  //add or remove restaurant id from favoriteList
   const toggleFavorite = (fav: favType) => {
     if (fav.isFav) {
       favoriteList.push(fav.favId);

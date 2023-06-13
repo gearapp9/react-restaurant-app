@@ -10,7 +10,7 @@ export const FoodContainer = ({ dishType, dish }: FoodContainerProps) => {
     <div className="menu-content">
       <h3>{dishType}</h3>
       <div className="foods">
-        {dish.map(val=><Food dish={val}/>)}
+        {dish.map((val,i)=><Food key={i} dish={val}/>)}
       </div>
     </div>
   );

@@ -1,40 +1,43 @@
 import "./card.css";
 
 import { Restaurant } from "../../models/Restaurant";
-import { useContext } from "react";
-import { FavoritesContext } from "../../contexts/FavoritesContext";
+import { createSearchParams, useNavigate } from "react-router-dom";
+import { FavIcon } from "./FavIcon";
 type CardProps = {
   restaurant: Restaurant;
-  cardClick: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
-export const Card = ({ restaurant, cardClick }: CardProps) => {
+export const Card = ({ restaurant }: CardProps) => {
   const { id, img, name, description_short } = restaurant;
-  const { getLocalStorage } = useContext(FavoritesContext);
 
-  const favs = getLocalStorage();
+  const navigate = useNavigate();
+
+  const cardClick = (e: React.MouseEvent<HTMLElement>) => {
+    const elment = e.target as HTMLElement;
+    if (elment.id === "fav") {
+      return;
+    }
+
+    navigate({
+      pathname: "/details",
+      search: createSearchParams({
+        id: `${elment.closest(".card")?.id}`,
+      }).toString(),
+    });
+  };
+
   return (
-    <div className="card" id={id.toString()} onClick={cardClick}>
-      <div
-        className={`fav ${
-          favs.some((val) => val === id.toString()) ? "favt" : "favf"
-        }`}
-        id="fav"
-      >
-        <div className="add-to-fav">{`${
-          favs.some((val) => val === id.toString())
-            ? "Remove From Fav"
-            : "Add To Fav"
-        }`}</div>
-      </div>
-
+    <div
+      className="card fav-icon-position"
+      id={id.toString()}
+      onClick={cardClick}
+    >
+      <FavIcon id={id} />
       <img src={img} alt="restaurant" />
       <div className="text">
         <h3>{name}</h3>
         <p>{description_short}</p>
       </div>
-
-     
     </div>
   );
 };

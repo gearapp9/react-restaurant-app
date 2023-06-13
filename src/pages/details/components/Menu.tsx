@@ -12,11 +12,13 @@ export const Menu = ({ menu }: MenuProps) => {
   const dishType = Object.keys(foodMenu) as string[];
   const dish = Object.values(foodMenu) as string[][];
 
+
+
   return (
     <div className="menu">
       <h2>Menu</h2>
       {dishType.map((value, i) => (
-        //change
+        
         <FoodContainer key={value} dishType={value} dish={dish[i]} />
       ))}
     </div>
