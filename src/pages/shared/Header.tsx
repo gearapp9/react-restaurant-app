@@ -49,6 +49,7 @@ export const Header = () => {
           </nav>
         </div>
       </header>
+      // You don't need this part if you take the Header out of the router in the App.tsx
       <main>
         <Outlet />
       </main>
