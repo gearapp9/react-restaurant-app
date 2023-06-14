@@ -12,6 +12,9 @@ export const Favorites = () => {
 
   const { restaurantList } = useContext(RestaurantContex);
 
+  // You did not need to share the access to the local storage
+  // You could have had a state variable in the Fav context returning the FavoritesIds and
+  // let the context handle the local storage in private
   const { getLocalStorage } = useContext(FavoritesContext);
   const favList = getLocalStorage();
   

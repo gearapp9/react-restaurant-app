@@ -48,6 +48,7 @@ export const FavoritesProvider = ({ children }: ContextProp) => {
     setRemoveFav(true);
   };
 
+  // This one could stay in the context, used in a useEffect with a dependency on favoriteList 
   const setLocalStorage = () => {
     localStorage.setItem("favorites", JSON.stringify(favoriteList));
   };

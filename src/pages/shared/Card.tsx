@@ -10,6 +10,7 @@ type CardProps = {
 export const Card = ({ restaurant }: CardProps) => {
   const { id, img, name, description_short } = restaurant;
 
+  // You could have used the Link from the react-router-dom lib as well :)
   const navigate = useNavigate();
 
   const cardClick = (e: React.MouseEvent<HTMLElement>) => {

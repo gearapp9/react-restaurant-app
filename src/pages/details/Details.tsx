@@ -29,6 +29,10 @@ export const Details = () => {
         <Description restaurant={restaurant} />
         <Menu menu={restaurant?.menu} />
       </div>
+       {/* 
+        This could be in App or the favorites context, no need to call it twice (here and in cardsContainer in the app 
+        The showModal can be maintained in the fav context and on click you change it to display the modal.
+      */}
       <RemoveFavPop />
     </section>
   );
