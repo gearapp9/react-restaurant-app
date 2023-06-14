@@ -7,6 +7,7 @@ import { Favorites } from "./pages/favorites/Favorites";
 
 
 const App = () => {
+  // so as we say, the Header does not need to be routed
   return (
     <Routes>
       <Route path="/" element={<Header />}>
